@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Bundle-Category: idempiere-plugin
+Bundle-ManifestVersion: 2
+Bundle-Name: LVE Custom Process
+Bundle-SymbolicName: net.frontuari.lvecustomprocess;singleton:=true
+Bundle-Version: 7.1.0.qualifier
+Bundle-Vendor: Frontuari, C.A. <http://frontuari.net>
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.apache.commons.lang3,
+ org.adempiere.base,
+ org.adempiere.plugin.utils,
+ org.adempiere.ui.zk,
+ zcommon,
+ zel,
+ zhtml,
+ zk,
+ zkbind,
+ zkplus,
+ zul,
+ zweb
+Import-Package: org.apache.commons.collections.keyvalue,
+ org.osgi.service.event
+Service-Component: OSGI-INF/ModelFactory.xml,
+ OSGI-INF/EventFactory.xml,
+ OSGI-INF/CalloutFactory.xml,
+ OSGI-INF/ProcessFactory.xml,
+ OSGI-INF/FormFactory.xml
+Bundle-ClassPath: .,
+ lib/freemarker.jar
+Bundle-Activator: org.adempiere.plugin.utils.AdempiereActivator

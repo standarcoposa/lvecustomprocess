@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+set -e
+
+DEBUG_MODE=
+
+if [ "$1" = "debug" ]; then
+    DEBUG_MODE=debug
+fi
+
+cd net.frontuari.lvecustomprocess.targetplatform
+./plugin-builder $DEBUG_MODE ../net.frontuari.lvecustomprocess ../net.frontuari.lvecustomprocess.test
